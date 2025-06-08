@@ -1,0 +1,23 @@
+#channel-up, #zone-up {
+    z-index: 1;
+    display: block;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#startup-message {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#startup-message h1 {
+    margin: 0 0 10px;
+}
+
+#startup-message p {
+    margin: 5px 0;
+}

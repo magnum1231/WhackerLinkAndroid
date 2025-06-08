@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Save and Exit Button -->
+        <Button
+            android:id="@+id/btnSaveExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="Save and Exit" />
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Custom String Input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Enter RadioID"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/customStringInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your RadioID"
+            android:textSize="18sp" />
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Display Options"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id="@+id/switchHideActionBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hide App Bar After 10s"/>
+
+        <Switch
+            android:id="@+id/switchHideStatusBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hide Android Status Bar"/>
+
+        <Switch
+            android:id="@+id/switchOnScreenControls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable On-Screen Controls"/>
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Keybinding Section -->
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Select an action and press a button to bind it."
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnPTT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set PTT Key" />
+
+        <Button
+            android:id="@+id/btnPower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Power: Not Set" />
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Channel Up: Not Set" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Channel Down: Not Set" />
+
+        <Button
+            android:id="@+id/btnEmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emergency: Not Set" />
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- YAML File Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Select a YAML File"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnAddYAML"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add YAML File" />
+
+        <ListView
+            android:id="@+id/yamlList"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp" />
+
+        <!-- Separator Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Save and Exit Button -->
+
+    </LinearLayout>
+</ScrollView>

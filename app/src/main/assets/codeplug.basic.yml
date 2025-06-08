@@ -1,0 +1,54 @@
+radioWide:
+  hostVersion: "R01.00.00"
+  codeplugVersion: "R01.00.00"
+  radioAlias: ""
+  serialNumber: "123ABC1234"
+  model: "APX6000"
+  inCarMode: "APX4500"
+
+systems:
+  - name: "System 1"
+    # This address is the Public IP of your Whackerlink Server. If hosted in a VPS, it is your Public IP of the VPS.
+    # If hosted locally, this is the Public IP of your Network.
+    address: "localhost"
+    authKey: "SuperSecretKey1"
+    port: 3000
+    rid: null
+
+qcList:
+  - a: 855.5
+    b: 349
+  - a: 1006.9
+    b: 500.9
+
+zones:
+  - name: "Zone 1"
+    channels:
+      - name: "Channel 1"
+        system: "System 1"
+        tgid: "2001"
+        scanList: List 1
+      - name: "Channel 2"
+        system: "System 1"
+        tgid: "15002"
+      - name: "Channel 3"
+        system: "System 1"
+        tgid: "15003"
+
+  - name: "Zone 2"
+    channels:
+      - name: "Channel A"
+        system: "System 1"
+        tgid: "16001"
+      - name: "Channel B"
+        system: "System 1"
+        tgid: "16002"
+      - name: "Channel C"
+        system: "System 1"
+        tgid: "16002"
+
+scanLists:
+  - name: List 1
+    channels:
+      - zone: Zone 1
+        channel: Channel 1

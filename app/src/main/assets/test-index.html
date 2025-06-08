@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android WebView Microphone Test</title>
+</head>
+<body>
+<h1>WebView Microphone Test</h1>
+<button onclick="startRecording()">Start Recording</button>
+<p id="micStatus">Mic Status: Not Recording</p>
+
+<script>
+    function startRecording() {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            document.getElementById("micStatus").innerText = "Mic Status: Not Supported";
+            alert("Your browser does not support microphone access.");
+            return;
+        }
+
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(function(stream) {
+                document.getElementById("micStatus").innerText = "Mic Status: Recording...";
+                console.log("Microphone access granted!");
+
+                // Optional: Create an audio context to visualize or process the input
+                const audioContext = new AudioContext();
+                const source = audioContext.createMediaStreamSource(stream);
+                console.log("Audio context started", source);
+            })
+            .catch(function(err) {
+                document.getElementById("micStatus").innerText = "Mic Status: Access Denied";
+                console.error("Error accessing microphone:", err);
+            });
+    }
+</script>
+</body>
+</html>
